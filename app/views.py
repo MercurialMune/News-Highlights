@@ -9,7 +9,9 @@ def index():
     View root page function that returns the index page and its data
     '''
     message= 'News Highlight Works'
-    return render_template('index.html', message=message)
+    title = 'Mercurial News Highlights'
+
+    return render_template('index.html', message=message , title=title)
 
 @app.route('/movie/<movie_id>')
 def movie(movie_id):
