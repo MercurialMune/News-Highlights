@@ -1,11 +1,11 @@
-lass Movie:
+class News:
     '''
     News class to define News Objects
     '''
 
-    def __init__(self,id,description,author,name,url):
+    def __init__(self,id,description,author,publishedAt,urlToImage):
         self.source =id
         self.description = description
-        self.name = name
+        self.publishedAt = publishedAt
         self.author = author
-        self.url = url
+        self.urlToImage = urlToImage
