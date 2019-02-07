@@ -17,12 +17,18 @@ At the terminal, run the following command:
 ```buildoutcfg
 ./run.py
 ``` 
+After working with the code offline, the project was pushed to Heroku for Deployment.
 ## Behavior Driven Development
   
 
-  | Given                 | When                       | Then                              |
-  | ----------------------|:--------------------------:|:---------------------------------:|
-  | allowed actions       | a user types in the action | the program fulfils the action    |
+  | Behavior                                 |              Solution                   |
+  |------------------------------------------|----------------------------------------:|
+  |  Users need to view sources              | Provide a navbar to navigate the sources|
+  |------------------------------------------|-----------------------------------------|
+  |Users need to view news highlights        | Provide cards and images to hold info   |
+  |------------------------------------------|----------------------------------------:|
+  |Users need to navigate to article source  |sourcethe program Provide links to site  |  
+  |------------------------------------------|----------------------------------------:|
  
 
 ## Built With
