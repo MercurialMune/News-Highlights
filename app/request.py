@@ -32,7 +32,7 @@ def get_bbc_news():
 
         if get_news_response['articles']:
             news_bbc_list = get_news_response['articles']
-            bbc_results = process_results(news_bbc_list)
+            bbc_results = process_bbc_results(news_bbc_list)
 
     return bbc_results
 
@@ -50,7 +50,7 @@ def get_cnn_news():
 
         if get_news_response['articles']:
             news_cnn_list = get_news_response['articles']
-            cnn_results = process_results(news_cnn_list)
+            cnn_results = process_cnn_results(news_cnn_list)
 
     return cnn_results
 
@@ -69,16 +69,53 @@ def get_aljazeera_news():
 
         if get_news_response['articles']:
             news_aljazeera_list = get_news_response['articles']
-            aljazeera_results = process_results(news_aljazeera_list)
+            aljazeera_results = process_jaz_results(news_aljazeera_list)
 
     return aljazeera_results
 
 
-def process_results(news_list):
+def process_jaz_results(news_list):
+
+    aljazeera_results = []
+
+    for news_item in news_list:
+        id = news_item.get('id')
+        description = news_item.get('description')
+        author = news_item.get('author')
+        publishedAt = news_item.get('publishedAt')
+        urlToImage = news_item.get('urlToImage')
+
+        if urlToImage:
+            news_object = News(id,description,author,publishedAt,urlToImage)
+            aljazeera_results.append(news_object)
+
+
+    return aljazeera_results
+
+
+def process_cnn_results(news_list):
+
+    cnn_results = []
+
+    for news_item in news_list:
+        id = news_item.get('id')
+        description = news_item.get('description')
+        author = news_item.get('author')
+        publishedAt = news_item.get('publishedAt')
+        urlToImage = news_item.get('urlToImage')
+
+        if urlToImage:
+            news_object = News(id,description,author,publishedAt,urlToImage)
+            cnn_results.append(news_object)
+
+
+    return cnn_results
+
+
+def process_bbc_results(news_list):
 
     bbc_results = []
-    cnn_results = []
-    aljazeera_results = []
+
     for news_item in news_list:
         id = news_item.get('id')
         description = news_item.get('description')
@@ -89,8 +126,6 @@ def process_results(news_list):
         if urlToImage:
             news_object = News(id,description,author,publishedAt,urlToImage)
             bbc_results.append(news_object)
-            cnn_results.append(news_object)
-            aljazeera_results.append(news_object)
 
 
-    return cnn_results, bbc_results, aljazeera_results
+    return bbc_results

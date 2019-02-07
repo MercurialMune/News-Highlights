@@ -30,21 +30,11 @@
         <img style="max-width:120px; height:auto" src="https://www.iconspng.com/images/globe-showing-africa-asia-and-europe-in-black-and-white-detailed/globe-showing-africa-asia-and-europe-in-black-and-white-detailed.jpg">
         <!--<hr>-->
     </div>
-    <div class="w3-container" style="margin-left:10%; top:15%">
-        <br><br><br><br><br>
-        {%for all_news in all_news%}
-            <div class="w3-margin w3-card-4 w3-round">
-                <div class="w3-row">
-                <img style="float:left; width:40%" class="w3-margin w3-round l3" src="{{all_news.urlToImage}}">
-                    <div class="w3-margin w3-center">
-                        <p><small>Published on {{all_news.publishedAt}}</small></p>
-                        <hr>
-                        <p>{{all_news.description}}</p>
-                        <button class="w3-button w3-white w3-border">Read More Here...</button>
-                    </div>
-                </div>
-            </div>
-        {%endfor%}
+    <div class="w3-container w3-center" style="margin-left:10%; top:15%">
+            <br><br><br><br><br>
+         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
+         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
+         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
     </div>
     </body>
 </html>
