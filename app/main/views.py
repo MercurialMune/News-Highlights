@@ -1,10 +1,11 @@
-from flask import render_template
-from app import app
-from app.request import get_news
+from flask import render_template,request,redirect,url_for
+from . import main
+from ..request import get_news
+from ..models import Sources
 
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
