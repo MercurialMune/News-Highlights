@@ -84,9 +84,10 @@ def process_jaz_results(news_list):
         author = news_item.get('author')
         publishedAt = news_item.get('publishedAt')
         urlToImage = news_item.get('urlToImage')
+        url = news_item.get('url')
 
         if urlToImage:
-            news_object = News(id,description,author,publishedAt,urlToImage)
+            news_object = News(id,description,author,publishedAt,urlToImage,url)
             aljazeera_results.append(news_object)
 
 
@@ -103,9 +104,10 @@ def process_cnn_results(news_list):
         author = news_item.get('author')
         publishedAt = news_item.get('publishedAt')
         urlToImage = news_item.get('urlToImage')
+        url = news_item.get('url')
 
         if urlToImage:
-            news_object = News(id,description,author,publishedAt,urlToImage)
+            news_object = News(id,description,author,publishedAt,urlToImage, url)
             cnn_results.append(news_object)
 
 
@@ -122,9 +124,10 @@ def process_bbc_results(news_list):
         author = news_item.get('author')
         publishedAt = news_item.get('publishedAt')
         urlToImage = news_item.get('urlToImage')
+        url = news_item.get('url')
 
         if urlToImage:
-            news_object = News(id,description,author,publishedAt,urlToImage)
+            news_object = News(id,description,author,publishedAt,urlToImage, url)
             bbc_results.append(news_object)
 
 

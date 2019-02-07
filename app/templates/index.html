@@ -8,6 +8,7 @@
         <title> Mercurial News Highlights </title>
         {% endif %}
         <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
     </head>
     <body>
     <div class="w3-container w3-black w3-center w3-bar-block" style="position:fixed; height:15%; width:100%;">
@@ -17,13 +18,13 @@
     </div>
     <div class="w3-sidebar w3-bar-block w3-center" style="width:10%; top:15%">
         <br>
-        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="{{url_for('main.index')}}" class="w3-bar-item w3-button">Home</a>
         <hr>
         <p>Our Sources</p>
         <hr>
-        <a href="#" class="w3-bar-item w3-button">BBC</a>
-        <a href="#" class="w3-bar-item w3-button">CNN</a>
-        <a href="#" class="w3-bar-item w3-button">Al-Jazeera</a>
+        <a href="{{url_for('main.bbc')}}" class="w3-bar-item w3-button">BBC</a>
+        <a href="{{url_for('main.cnn')}}" class="w3-bar-item w3-button">CNN</a>
+        <a href="{{url_for('main.jaz')}}" class="w3-bar-item w3-button">Al-Jazeera</a>
         <hr>
         <br>
         <br>
@@ -31,10 +32,16 @@
         <!--<hr>-->
     </div>
     <div class="w3-container w3-center" style="margin-left:10%; top:15%">
+        <div class="w3-card">
             <br><br><br><br><br>
-         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
-         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
-         <img class="w3-card" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera">
+            <h2>Welcome to Mercurial News Highlights</h2>
+            <br><br><br><br><br>
+            <p>You can receive news updates as they happen from sources all around the world. Below are examples of credible sources our API gets news from. To get a gist of what the site is about, how about you choose a source from the links on the left sidebar... </p>
+        </div>
+
+         <img class="w3-card w3-hover-sepia" src="https://interactive.aljazeera.com/aje/live-results-us-election-day-2016/orangeicon.jpg" alt="Aljazeera" height="200" width="200">
+         <img class="w3-card w3-hover-sepia" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Cnn_logo_red_background.png" alt="CNN" height="200" width="200">
+         <img class="w3-card w3-hover-sepia" src="https://employees.pk/wp-content/uploads/2018/06/bbc-news.jpg" alt="BBC" height="200" width="200">
     </div>
     </body>
 </html>
