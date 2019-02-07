@@ -16,8 +16,6 @@ class Sources:
     News class to define News Objects
     '''
 
-    all_sources = []
-
     def __init__(self, id, name, url):
         self.source = id
         self.name = name

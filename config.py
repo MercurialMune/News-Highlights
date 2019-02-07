@@ -5,9 +5,11 @@ class Config:
     '''
     General configuration parent class
     '''
-    NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
-    MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    JAZ_API_BASE_URL ='https://newsapi.org/v2/top-headlines?sources=al-jazeera-english&apiKey={}'
+    BBC_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey={}'
+    CNN_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources=cnn&apiKey={}'
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+
     pass
 
 
